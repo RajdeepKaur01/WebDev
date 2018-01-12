@@ -1,0 +1,14 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /home/rajdeep/www/main;
+
+	index index.html;
+
+	server_name rajdeepk.site www.rajdeepk.site;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
