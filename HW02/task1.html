@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task 1</title>
+  <style>
+  .red {
+    color: red;
+  }
+  .blue {
+    color: blue;
+  }
+  .yellow {
+    color: yellow;
+  }
+  .green {
+    color: green;
+  }
+  a {
+    line-height: 150%;
+    font-size: 120%;
+  }
+  table {
+    width: 50%;
+    border: 1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  th {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 120%;
+  }
+  td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  div {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <a href="https://www.w3schools.com/html/default.asp">Learn HTML</a><br>
+    <a href="https://www.w3schools.com/css/default.asp">Learn CSS</a><br>
+    <a href="https://en.wikipedia.org/wiki/Lion">Lion Wikipedia</a><br>
+    <!-- Below image source is Wikipedia-->
+    <img src="lion_image.jpg"
+    alt="Lion" width="400" height="250">
+    <h1>
+      <span class="red">L</span>
+      <span class="blue">i</span>
+      <span class="yellow">o</span>
+      <span class="green">n</span>
+    </h1>
+    <table id="table1">
+      <tr>
+        <th>x</th> <th>2^x</th>
+      </tr>
+    </table>
+  </div>
+  <script>
+  var table1 = document.getElementById('table1');
+  for(i=1;i<9;i++){
+    var tr = document.createElement("TR");
+    var td1 = document.createElement("TD");
+    var td2 = document.createElement("TD");
+    td1.innerHTML = i;
+    td2.innerHTML = Math.pow(2,i);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    table1.appendChild(tr);
+  }
+  </script>
+</body>
+</html>

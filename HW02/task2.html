@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Task 2</title>
+  <style>
+  p {
+    text-align: center;
+  }
+  button {
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+  }
+  div {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <h1 id="header1">10</h1>
+    <button onclick="alertFn()">Alert</button>
+    <button onclick="incrementFn()">Increment</button>
+    <button onclick="appendFn()">Append</button>
+  </div>
+  <script>
+  function alertFn() {
+    alert(document.getElementById('header1').innerHTML);
+  }
+  function incrementFn() {
+    var temp = new Number(document.getElementById('header1').innerHTML);
+    document.getElementById('header1').innerHTML = temp + 1;
+  }
+  function appendFn() {
+    var para = document.createElement("P");
+    var head = document.getElementById('header1').innerHTML;
+    var num = document.createTextNode(head);
+    para.appendChild(num);
+    document.body.appendChild(para);
+  }
+  </script>
+</body>
+</html>
