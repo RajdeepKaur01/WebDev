@@ -17,6 +17,12 @@ defmodule CalcTest do
     assert Calc.eval([],"",[43],[]) == 43
   end
 
+  test "Eval helper functions" do
+    assert Calc.eval1(["(","3","-","1",")"],"",[],[]) == 2
+    assert Calc.eval_close([],"",[3,1],["+","("]) == 4
+    assert Calc.eval_exp(["+"],"",[2,3,4],["*"]) == 10
+  end
+
   test "hasPrecedence Function" do
     assert Calc.hasPrecedence("+","(") == false
     assert Calc.hasPrecedence("+",")") == false
