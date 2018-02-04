@@ -18,6 +18,7 @@ defmodule Calc do
     |> eval("",[],[])
   end
 
+  # Helper Functions
   def eval([head|tail],acc,list1,list2) do
     case head do
       n when n in ["0","1","2","3","4","5","6","7","8","9"]
@@ -38,7 +39,7 @@ defmodule Calc do
   end
 
   def eval([],acc,list1,[]) do
-    Enum.at(list1,0)
+    Enum.at(list1,String.length(acc))
   end
 
   def eval1(list,acc,list1,list2) do
